@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria De Fotos Grupo Angelos</title>
+    <meta name="description" content="Grupo Angelos: Especializado em dependência quimica alcoolismo e saúde mental, com abordagens personalizadas e profissionais dedicados a apoiar a recuperação eficaz e duradoura.">
+    <meta name="keywords" content="centro terapeutico, dependência quimica, alcoolismo, hospital psiquiatrico, drogas, transtornos mentais, clinica de drogados, clinica de reabilitção em são paulo, reabilitação de dependente quimico, alcoolismo, esquizofrenia, doente da cabeça, pessoa louca, saude mental, tratamento psicologico, terapia, bem-estar, clinica de recuperacao, nova mente">
+    <meta property="og:type" content="https://www.grupoangelosdependenciaquimica.com.br">
+    <meta property="og:url" content="https://www.grupoangelosdependenciaquimica.com.br">
+    <meta property="og:title" content="Grupo Angelos">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Grupo Angelos: Oferecemos tratamentos de dependência quimica, alcoolismo e saúde mental em um ambiente acolhedor.">
+    <meta property="og:image" content="URL_DA_IMAGEM_DO_LOGO">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+    <style>
+       /* Reset básico e variáveis */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --text-color: #212529;
+    --bg-color: #f8f9fa;
+    --white-color: #fff;
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --border-radius: 0.375rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+        header {
+            background-color: #ffffffde;
+            color: #520c0c;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        header a {
+            color: #0c1fcf;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header a:hover {
+            color: #000000;
+        }
+
+/* ondas circulares */
+    h2::before,
+    h2::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: rgba(26, 115, 232, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: -1;
+      animation: circleExplosion 2s ease-out infinite;
+    }
+
+    /* primeira onda */
+    h2::before {
+      animation-delay: 0s;
+    }
+
+    /* segunda onda */
+    h1::after {
+      animation-delay: 0.5s;
+    }
+
+    /* terceira onda (extra com span) */
+    h2 span {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: rgba(26, 115, 232, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: -1;
+      animation: circleExplosion 2s ease-out infinite;
+      animation-delay: 1s;
+    }
+
+    @keyframes explosion {
+      0% {
+        opacity: 0;
+        transform: scale(0.1) rotate(0deg);
+        letter-spacing: -20px;
+        filter: blur(5px);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(15deg);
+        letter-spacing: 2px;
+        filter: blur(0px);
+      }
+      70% {
+        transform: scale(0.9) rotate(-10deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        letter-spacing: normal;
+      }
+    }
+
+    @keyframes circleExplosion {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.8;
+      }
+      70% {
+        transform: translate(-50%, -50%) scale(6);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(8);
+        opacity: 0;
+      }
+    }
+
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .animacao-texto {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 50px 0;
+            line-height: 1.6;
+            font-weight: bold;
+            color: #040806;
+        }
+
+        .animacao-texto span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(20px);
+            animation: aparecer 0.6s forwards;
+        }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        #frase-final {
+            background-color: #e6ffe6;
+            padding: 30px 15px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .frase-animada {
+            font-size: 20px;
+            color: #0033cc;
+            font-family: Arial, sans-serif;
+            animation: fadeInUp 1.5s ease-out;
+            font-weight: bold;
+        }
+        
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #contato {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #contato h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .pulsar {
+            display: inline-block;
+            font-weight: bold;
+            animation: pulsar 0.8s infinite;
+        }
+
+        @keyframes pulsar {
+            0% { transform: scale(1); text-shadow: 0 0 5px rgba(9, 255, 0, 0.6); }
+            50% { transform: scale(1.2); text-shadow: 0 0 15px rgba(9, 255, 0, 0.6); }
+            100% { transform: scale(1); text-shadow: 0 0 5px rgba(9, 255, 0, 0.6); }
+        }
+
+        #contato p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        #contato a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #contato a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 10px;
+            background-color: var(--text-color);
+            color: rgb(255, 255, 255);
+            margin-top: 50px;
+        }
+    
+        /* Botões flutuantes */
+        .fixed-buttons, .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .fixed-buttons {
+            left: 20px;
+        }
+
+        .social-buttons {
+            right: 20px;
+        }
+        
+        .fixed-buttons a {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .fixed-buttons img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .social-buttons a {
+            background-color: white;
+            border-radius: 50%;
+            padding: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .social-buttons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .fixed-buttons a:hover, .social-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        .bounce { animation: bounce 1.5s infinite; }
+        .pulse { animation: pulse 1.5s infinite; }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.3rem;
+                flex-basis: 100%;
+                text-align: center;
+            }
+            header {
+                justify-content: center;
+            }
+            .animacao-texto {
+                font-size: 1.2rem;
+            }
+            #contato h2 {
+                font-size: 22px;
+            }
+            #contato p {
+                font-size: 14px;
+            }
+            .fixed-buttons a {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+            .fixed-buttons img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+         /* Estilo da frase final */
+  #frase-final {
+    background-color: #b2f2bb; /* verde claro suave, combinando com o site */
+    padding: 30px 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .frase-animada {
+    font-size: 20px;
+    color: #0033cc; /* azul do texto principal do site */
+    font-family: Arial, sans-serif;
+    animation: fadeInUp 1.5s ease-out, pulsar 2s infinite;
+  }
+
+  /* Animação de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Efeito de pulsar suave */
+  @keyframes pulsar {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="fotos/LOGO_SEM_FUNDO.png" alt="Grupo Angelos Dependência Química Alcoolismo e Saúde Mental" />
+    <h2>
+        Grupo Angelos Dependência Química Alcoolismo e Saúde Mental
+    </h2>
+    <a href="index.html">Voltar</a>
+</header>
+
+<section>
+    <div class="animacao-texto">
+        <span style="animation-delay: 0s">Bem-vindo</span>
+        <span style="animation-delay: 0.2s">a</span>
+        <span style="animation-delay: 0.4s">um</span>
+        <span style="animation-delay: 0.6s">lugar</span>
+        <span style="animation-delay: 0.8s">onde</span>
+        <span style="animation-delay: 1s">o</span>
+        <span style="animation-delay: 1.2s">acolhimento</span>
+        <span style="animation-delay: 1.4s">não</span>
+        <span style="animation-delay: 1.6s">é</span>
+        <span style="animation-delay: 1.8s">uma</span>
+        <span style="animation-delay: 2s">regra,</span>
+        <span style="animation-delay: 2.2s">é</span>
+        <span style="animation-delay: 2.4s">a</span>
+        <span style="animation-delay: 2.6s">alma</span>
+        <span style="animation-delay: 2.8s">do</span>
+        <span style="animation-delay: 3s">nosso</span>
+        <span style="animation-delay: 3.2s">trabalho.</span>
+        <br>
+        <span style="animation-delay: 3.4s">Nossa</span>
+        <span style="animation-delay: 3.6s">base</span>
+        <span style="animation-delay: 3.8s">não</span>
+        <span style="animation-delay: 4s">é</span>
+        <span style="animation-delay: 4.2s">apenas</span>
+        <span style="animation-delay: 4.4s">o</span>
+        <span style="animation-delay: 4.6s">acolhimento,</span>
+        <span style="animation-delay: 4.8s">é</span>
+        <span style="animation-delay: 5s">o</span>
+        <span style="animation-delay: 5.2s">amor</span>
+        <span style="animation-delay: 5.4s">e</span>
+        <span style="animation-delay: 5.6s">o</span>
+        <span style="animation-delay: 5.8s">cuidado.</span>
+    </div>
+</section>
+
+<h2>nossas unidades
+    <br>👇🏻👇🏻👇🏻
+</h2>
+
+<main>
+    <div class="gallery-container">
+        <div class="gallery-item"> <img src="fotos/imagem1.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem2.jpg" alt="Imagem 1" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem3.jpg" alt="Imagem 2" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem4.jpg" alt="Imagem 3" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem5.jpg" alt="Imagem 4" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem6.jpg" alt="Imagem 5" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem7.jpg" alt="Imagem 6" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem8.jpg" alt="Imagem 7" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem9.jpg" alt="Imagem 8" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem10.jpg" alt="Imagem 9" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem11.jpg" alt="Imagem 10" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem12.jpg" alt="Imagem 11" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem13.jpg" alt="Imagem 12" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem14.jpg" alt="Imagem 13" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem15.jpg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem16.jpg" alt="Imagem 15" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem17.jpg" alt="Imagem 16" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem18.jpg" alt="Imagem 17" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem19.jpg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem20.jpg" alt="Imagem 19" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem21.jpg" alt="Imagem 20" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem22.jpg" alt="Imagem 21" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem23.jpg" alt="Imagem 22" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem24.jpg" alt="Imagem 23" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem25.jpg" alt="Imagem 24" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem26.jpg" alt="Imagem 25" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem27.jpg" alt="Imagem 26" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem28.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem29.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem30.jpg" alt="Imagem 1" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem31.jpg" alt="Imagem 2" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem32.jpeg" alt="Imagem 3" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem33.jpeg" alt="Imagem 4" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem34.jpeg" alt="Imagem 5" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem35.jpeg" alt="Imagem 6" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem36.jpeg" alt="Imagem 7" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem37.jpeg" alt="Imagem 8" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem38.jpeg" alt="Imagem 9" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem39.jpeg" alt="Imagem 10" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem40.jpeg" alt="Imagem 11" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem41.jpeg" alt="Imagem 12" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem42.jpeg" alt="Imagem 13" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem43.jpeg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem44.jpeg" alt="Imagem 15" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem45.jpeg" alt="Imagem 16" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem46.jpeg" alt="Imagem 17" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem47.jpeg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem48.jpg" alt="Imagem 19" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem49.jpg" alt="Imagem 20" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem50.jpg" alt="Imagem 21" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem51.jpg" alt="Imagem 22" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem52.jpg" alt="Imagem 23" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem53.jpg" alt="Imagem 24" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem54.jpg" alt="Imagem 25" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem55.jpg" alt="Imagem 26" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem56.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem57.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem58.jpg" alt="Imagem 20" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem59.jpg" alt="Imagem 21" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem60.jpg" alt="Imagem 22" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem61.jpg" alt="Imagem 23" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem62.jpg" alt="Imagem 24" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem63.jpg" alt="Imagem 25" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem64.jpg" alt="Imagem 26" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem65.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem66.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem67.jpg" alt="Imagem 28" /> </div>
+        <div class="gallery-item"> <img src="fotos/imagem68.jpg" alt="Imagem 28" /> </div>
+    </div>
+</main>
+
+<section id="frase-final">
+    <p class="frase-animada">
+        <strong>Um ambiente de paz, amor e esperança, feito para transformar vidas. Venha conhecer de perto.</strong>
+    </p>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+           <p>
+  <img src="fotos/LOGO_SEM_FUNDO.png" alt="" width="70">
+  &copy; 2025 Grupo Angelos. Todos os direitos reservados.
+</p>
+        </div>
+    </footer>
+
+</body>
+</html>

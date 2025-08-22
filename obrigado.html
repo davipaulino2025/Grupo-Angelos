@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado - Grupo Angelos</title>
+    <meta name="description" content="Grupo Angelos: Especializado em dependência quimica alcoolismo e saúde mental, com abordagens personalizadas e profissionais dedicados a apoiar a recuperação eficaz e duradoura.">
+    <meta name="keywords" content="centro terapeutico, dependência quimica, alcoolismo, hospital psiquiatrico, drogas, transtornos mentais, clinica de drogados, clinica de reabilitção em são paulo, reabilitação de dependente quimico, alcoolismo, esquizofrenia, doente da cabeça, pessoa louca, saude mental, tratamento psicologico, terapia, bem-estar, clinica de recuperacao, nova mente">
+    <meta property="og:type" content="https://www.grupoangelosdependenciaquimica.com.br">
+    <meta property="og:url" content="https://www.grupoangelosdependenciaquimica.com.br">
+    <meta property="og:title" content="Grupo Angelos">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Grupo Angelos: Oferecemos tratamentos de dependência quimica, alcoolismo e saúde mental em um ambiente acolhedor.">
+    <meta property="og:image" content="URL_DA_IMAGEM_DO_LOGO">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1202a3a8;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    margin: 0;
+}
+
+h1 span {
+    display: inline-block;
+    animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0 20px 0;
+}
+
+.botao-voltar {
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #2201b3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.botao-voltar:hover {
+    background-color: #050302;
+}
+
+footer {
+            text-align: center;
+            padding: 15px 10px;
+            background-color: var(--text-color);
+            color: rgb(255, 255, 255);
+            margin-top: 50px;
+        }
+
+img {
+    width: 150px;
+    max-width: 50%;
+    height: auto;
+    animation: zoomEffect 1s infinite;
+    transform-origin: center;
+    margin-bottom: 20px;
+}
+
+@keyframes zoomEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Ajustes para tablets e telas médias */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+    .botao-voltar { font-size: 16px; padding: 12px 20px; }
+    img { width: 120px; max-width: 40%; }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    p { font-size: 0.95rem; }
+    .botao-voltar { font-size: 14px; padding: 10px 18px; }
+    img { width: 100px; max-width: 60%; }
+}
+</style>
+</head>
+<body>
+<br><br><br><br><br>
+<img src="FOTOS/LOGO_SEM_FUNDO.png" alt="logo-affa_11" style="display: block; margin: 0 auto;">
+
+<main>
+    <h1 id="animated-text">
+  <span>Obrigado</span> 
+  <span>por</span> 
+  <span>nos</span> 
+  <span>contatar!</span>
+</h1>
+    <p>Nossa equipe do Grupo Angelos entrará em contato com você em breve.</p>
+    <a href="index.html" class="botao-voltar">Voltar à Página Inicial</a>
+</main>
+
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+           <p>
+  <img src="fotos/LOGO_SEM_FUNDO.png" alt="" width="70">
+  &copy; 2025 Grupo Angelos. Todos os direitos reservados.
+</p>
+        </div>
+    </footer>
+
+<script>
+const h1 = document.getElementById("animated-text");
+const text = h1.textContent;
+h1.textContent = "";
+
+text.split("").forEach((char, index) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.animationDelay = `${index * 0.05}s`;
+    h1.appendChild(span);
+});
+</script>
+
+</body>
+</html>
